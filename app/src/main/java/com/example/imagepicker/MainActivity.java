@@ -53,8 +53,6 @@ public class MainActivity extends AppCompatActivity {
         binding=ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        messageShowUsingToast();
-        
         //TODO ask for permission of camera upon first launch of application
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (checkSelfPermission(android.Manifest.permission.CAMERA) == PackageManager.PERMISSION_DENIED || checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
@@ -92,11 +90,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-    private void messageShowUsingToast() {
-        Toast.makeText(this, "This is my second commit...", Toast.LENGTH_SHORT).show();
-    }
-
     Uri image_uri;
     //TODO opens camera so that user can capture image
     private void openCamera() {
